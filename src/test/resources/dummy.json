@@ -1,0 +1,229 @@
+{
+  "1" : {
+    "id" : 1,
+    "questionText": "Creating the Initial Table. You need to create a table to store employee records. Which SQL command will you use?",
+    "answers": [
+      {
+        "id": 0,
+        "text": "A) CREATE TABLE employees (id INT, name VARCHAR(50), role VARCHAR(50));",
+        "isRight": true
+      },
+      {
+        "id": 1,
+        "text": "B) INSERT INTO employees (id, name, role) VALUES (1, 'John Doe', 'Developer');",
+        "isRight": false
+      },
+      {
+        "id": 2,
+        "text": "C) SELECT * FROM employees;",
+        "isRight": false
+      },
+      {
+        "id": 3,
+        "text": "D) DROP TABLE employees;",
+        "isRight": false
+      }
+    ],
+    "nextQuestionID" : 2
+  },
+
+  "2" : {
+    "id" : 2,
+    "questionText": "Inserting Data. Now that you have your table, you need to insert employee data. What’s the correct SQL command to add a new employee?",
+    "answers": [
+      {
+        "id": 0,
+        "text": "A) UPDATE employees SET role = 'Manager' WHERE id = 1;",
+        "isRight": false
+      },
+      {
+        "id": 1,
+        "text": "B) DELETE FROM employees WHERE id = 1;",
+        "isRight": false
+      },
+      {
+        "id": 2,
+        "text": "C) SELECT name FROM employees;",
+        "isRight": false
+      },
+      {
+        "id": 3,
+        "text": "D) INSERT INTO employees (id, name, role) VALUES (2, 'Jane Smith', 'Manager');",
+        "isRight": true
+      }
+    ],
+    "nextQuestionID" : 3
+  },
+
+  "3" : {
+    "id" : 3,
+    "questionText": "Updating Records. An employee's role has changed. How do you update the role of the employee with id = 2?",
+    "answers": [
+      {
+        "id": 0,
+        "text": "A) ALTER TABLE employees MODIFY role VARCHAR(100);",
+        "isRight": false
+      },
+      {
+        "id": 1,
+        "text": "B) INSERT INTO employees (id, name, role) VALUES (2, 'Jane Smith', 'Senior Manager');",
+        "isRight": false
+      },
+      {
+        "id": 2,
+        "text": "C) UPDATE employees SET role = 'Senior Manager' WHERE id = 2;",
+        "isRight": true
+      },
+      {
+        "id": 3,
+        "text": "D) SELECT FROM employees WHERE id = 2;",
+        "isRight": false
+      }
+    ],
+    "nextQuestionID" : 4
+  },
+
+  "4" : {
+    "id" : 4,
+    "questionText": "Adding a New Column. Your manager asks you to add a new column for storing each employee's department. Which command will you use?",
+    "answers": [
+      {
+        "id": 0,
+        "text": "A) UPDATE employees SET department = 'HR';",
+        "isRight": false
+      },
+      {
+        "id": 1,
+        "text": "B) INSERT INTO employees (department) VALUES ('HR');",
+        "isRight": false
+      },
+      {
+        "id": 2,
+        "text": "C) ALTER TABLE employees ADD department VARCHAR(50);",
+        "isRight": true
+      },
+      {
+        "id": 3,
+        "text": "D) SELECT department FROM employees where value = 'HR'",
+        "isRight": false
+      }
+    ],
+    "nextQuestionID" : 5
+  },
+
+  "5" : {
+    "id" : 5,
+    "questionText": "Inserting Data into the New Column. Now that you have a new column, how do you insert data into it for an existing employee?",
+    "answers": [
+      {
+        "id": 0,
+        "text": "A) UPDATE employees SET department = 'HR' WHERE id = 2;",
+        "isRight": true
+      },
+      {
+        "id": 1,
+        "text": "B) ALTER TABLE employees ADD department 'HR';",
+        "isRight": false
+      },
+      {
+        "id": 2,
+        "text": "C) INSERT INTO employees (department) VALUES ('HR');",
+        "isRight": false
+      },
+      {
+        "id": 3,
+        "text": "D) DROP COLUMN department FROM employees;\n",
+        "isRight": false
+      }
+    ],
+    "nextQuestionID" : 6
+  },
+
+  "6" : {
+    "id" : 6,
+    "questionText": "Joining Tables. You now need to create a new table called departments and link it to your employees table.\n What’s the correct SQL command to retrieve employee names along with their department names?",
+    "answers": [
+      {
+        "id": 0,
+        "text": "A) SELECT employees.name, departments.name FROM employees JOIN departments USING employees.department_id = departments.id;",
+        "isRight": false
+      },
+      {
+        "id": 1,
+        "text": "B) SELECT * FROM employees, departments WHERE employees.id = departments.id;",
+        "isRight": false
+      },
+      {
+        "id": 2,
+        "text": "C) SELECT employees.name, departments.name FROM employees JOIN departments ON employees.department_id = departments.id;",
+        "isRight": true
+      },
+      {
+        "id": 3,
+        "text": "D) ALTER TABLE employees ADD FOREIGN KEY (department_id) REFERENCES departments(id);",
+        "isRight": false
+      }
+    ],
+    "nextQuestionID" : 7
+  },
+
+  "7" : {
+    "id" : 7,
+    "questionText": "Complex Query with Aggregation. Your task is to find the number of employees in each department. Which SQL command will you use?",
+    "answers": [
+      {
+        "id": 0,
+        "text": "A) SELECT name, COUNT(*) FROM employees WHERE department = 'HR'",
+        "isRight": false
+      },
+      {
+        "id": 1,
+        "text": "B) SELECT department, COUNT(*) FROM employees GROUP BY name;",
+        "isRight": false
+      },
+      {
+        "id": 2,
+        "text": "C) SELECT * FROM employees ORDER BY department HAVING COUNT(*);",
+        "isRight": false
+      },
+      {
+        "id": 3,
+        "text": "D) SELECT department, COUNT(*) FROM employees GROUP BY department;",
+        "isRight": true
+      }
+    ],
+    "nextQuestionID" : 8
+  },
+
+  "8" : {
+    "id" : 8,
+    "questionText": "Dealing with Transactions. You need to make several changes to the database, but you want to ensure they are all successful before committing.\n Which SQL command will you use to start this process?",
+    "answers": [
+      {
+        "id": 0,
+        "text": "A) START TRANSACTION",
+        "isRight": false
+      },
+      {
+        "id": 1,
+        "text": "B) BEGIN TRANSACTION;",
+        "isRight": true
+      },
+      {
+        "id": 2,
+        "text": "C) COMMIT",
+        "isRight": false
+      },
+      {
+        "id": 3,
+        "text": "D) ROLLBACK",
+        "isRight": false
+      }
+    ],
+    "nextQuestionID" : -1
+  }
+}
+
+
+
+

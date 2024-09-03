@@ -1,0 +1,40 @@
+.typed-text {
+    font-size: 1.5rem;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: black;
+    margin-left: 2px;
+    animation: blink 0.8s steps(2) infinite;
+}
+
+@keyframes blink {
+    50% { background-color: transparent; }
+}
+
+.form-section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-control {
+    width: 100%;
+    max-width: 500px;
+    font-size: 1.5rem;
+}
+
+input[type="submit"] {
+    display: block !important;
+    margin: 30px auto !important;
+    width: 200px !important;
+    height: 50px !important;
+    font-size: 20px !important;
+}
